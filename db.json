@@ -1,264 +1,70 @@
 {
-  "plist": [
+  "events": [
     {
-      "id": 1,
-      "fname": "Caelan",
-      "lname": "Cole",
-      "gender": "Male",
-      "age": "32",
-      "location": "Prejmer Romania ",
-      "status": "Already first dose",
-      "profileimg": "https://pbs.twimg.com/profile_images/1305610142319173632/eX2eFuU0.jpg",
-      "vaccine1": [
-        {
-          "vname": "Moderna",
-          "vtype": "mRNA-based vaccine",
-          "vdate": "Wednesday 12th of August 2020",
-          "vimg": "https://www.jdrf.org/wp-content/uploads/2020/04/Moderna-Logo-1200x800-1.jpg"
-        }
-      ],
-      "vaccine2": [
-        {
-          "vname": "",
-          "vtype": "",
-          "vdate": "",
-          "vimg": ""
-        }
-      ]
+      "id": 123,
+      "category": "animal welfare",
+      "title": "Cat Adoption Day",
+      "description": "Find your new feline friend at this event.",
+      "location": "Meow Town",
+      "date": "January 28, 2022",
+      "time": "12:00",
+      "petsAllowed": true,
+      "organizer": "Kat Laydee"
     },
     {
-        "id": 2,
-        "fname": "Emillie",
-        "lname": "Kinney",
-        "gender": "Female",
-        "age": "61",
-        "location": "Piskivka Ukraine",
-        "status": "Already first dose",
-        "profileimg": "https://pbs.twimg.com/profile_images/1305610142319173632/eX2eFuU0.jpg",
-        "vaccine1": [
-          {
-            "vname": "AstraZeneca",
-            "vtype": "Adenovirus vaccine",
-            "vdate": "Tuesday 25th of August 2020",
-            "vimg": "https://www.fluidda.com/wp-content/uploads/2020/12/astrazeneca-logo-png-1280-1280x512-1.png"
-          }
-        ],
-        "vaccine2": [
-          {
-            "vname": "",
-            "vtype": "",
-            "vdate": "",
-            "vimg": ""
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "fname": "Tomasz",
-        "lname": "Burnett",
-        "gender": "Male",
-        "age": "25",
-        "location": "Nahuizalco El Salvador",
-        "status": "Already second dose",
-        "profileimg": "https://pbs.twimg.com/profile_images/1305610142319173632/eX2eFuU0.jpg",
-        "vaccine1": [
-          {
-            "vname": "sinopharm",
-            "vtype": "Recombinant adenovirus vaccine (rAd26 and rAd5)",
-            "vdate": "Tuesday 1st of June 2021",
-            "vimg": "https://www.clbrief.com/wp-content/uploads/2020/08/Sinopharm-Group.png"
-          }
-        ],
-        "vaccine2": [
-          {
-            "vname": "sinopharm",
-            "vtype": "Recombinant adenovirus vaccine (rAd26 and rAd5)",
-            "vdate": "Tuesday 15th of June 2021",
-            "vimg": "https://www.clbrief.com/wp-content/uploads/2020/08/Sinopharm-Group.png"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "fname": "Honor",
-        "lname": "Cervantes",
-        "gender": "Female",
-        "age": "50",
-        "location": "Peace River Canada",
-        "status": "Already second dose",
-        "profileimg": "https://pbs.twimg.com/profile_images/1305610142319173632/eX2eFuU0.jpg",
-        "vaccine1": [
-          {
-            "vname": "Pfizer",
-            "vtype": "mRNA-based vaccine",
-            "vdate": "Thursday 1st of April 2020",
-            "vimg": "https://www.pfizer.co.th/images/custom/pfizerlogo.svg"
-          }
-        ],
-        "vaccine2": [
-          {
-            "vname": "Pfizer",
-            "vtype": "mRNA-based vaccine",
-            "vdate": "Thursday 15th of April 2020",
-            "vimg": "https://www.pfizer.co.th/images/custom/pfizerlogo.svg"
-          }
-        ]
-      },
-      {
-        "id": 5,
-        "fname": "Jacob",
-        "lname": "Talley",
-        "gender": "Male",
-        "age": "18",
-        "location": "Gereba Indonesia",
-        "status": "Already first dose",
-        "profileimg": "https://pbs.twimg.com/profile_images/1305610142319173632/eX2eFuU0.jpg",
-        "vaccine1": [
-          {
-            "vname": "johnson & johnson",
-            "vtype": "mRNA-based vaccine",
-            "vdate": "Saturday 26th of June 2021",
-            "vimg": "https://logos-world.net/wp-content/uploads/2020/09/Johnson-Johnson-Logo.png"
-          }
-        ],
-        "vaccine2": [
-          {
-            "vname": "",
-            "vtype": "",
-            "vdate": "",
-            "vimg": ""
-          }
-        ]
-      },
-      {
-        "id": 6,
-        "fname": "Nishat",
-        "lname": "Burnett",
-        "gender": "Female",
-        "age": "9",
-        "location": "Carpi Italy",
-        "status": "Already first dose",
-        "profileimg": "https://pbs.twimg.com/profile_images/1305610142319173632/eX2eFuU0.jpg",
-        "vaccine1": [
-          {
-            "vname": "QazVac",
-            "vtype": "Inactivated vaccine",
-            "vdate": "Thursday 16th of July 2020",
-            "vimg": "https://www.gov.kz/uploads/2021/4/23/b08ab7393c7c99669850edac790f3f63_original.20524.jpg"
-          }
-        ],
-        "vaccine2": [
-          {
-            "vname": "",
-            "vtype": "",
-            "vdate": "",
-            "vimg": ""
-          }
-        ]
-      },
-      {
-        "id": 7,
-        "fname": "Mike",
-        "lname": "Dolan",
-        "gender": "Male",
-        "age": "25",
-        "location": "Moya Spain",
-        "status": "Already second dose",
-        "profileimg": "https://pbs.twimg.com/profile_images/1305610142319173632/eX2eFuU0.jpg",
-        "vaccine1": [
-          {
-            "vname": "COVIran Barekat",
-            "vtype": "Inactivated vaccine",
-            "vdate": "Sunday 6th of September 2020",
-            "vimg": "https://www.justestepona.com/wp-content/uploads/cache/images/coviran/coviran-2162076830.png"
-          }
-        ],
-        "vaccine2": [
-          {
-            "vname": "COVIran Barekat",
-            "vtype": "Inactivated vaccine",
-            "vdate": "Sunday 22nd of September 2020",
-            "vimg": "https://www.justestepona.com/wp-content/uploads/cache/images/coviran/coviran-2162076830.png"
-          }
-        ]
-      },
-      {
-        "id": 8,
-        "fname": "Rosanna",
-        "lname": "Lyons",
-        "gender": "Female",
-        "age": "40",
-        "location": "Grindu Romania",
-        "status": "Already second dose",
-        "profileimg": "https://pbs.twimg.com/profile_images/1305610142319173632/eX2eFuU0.jpg",
-        "vaccine1": [
-          {
-            "vname": "Abdala",
-            "vtype": "Protein subunit vaccine",
-            "vdate": "Sunday 6th of December 2020",
-            "vimg": "https://pbs.twimg.com/media/E4c1m-2XMAc3OTK.jpg"
-          }
-        ],
-        "vaccine2": [
-          {
-            "vname": "Abdala",
-            "vtype": "Protein subunit vaccine",
-            "vdate": "Sunday 22th of December 2020",
-            "vimg": "https://pbs.twimg.com/media/E4c1m-2XMAc3OTK.jpg"
-          }
-        ]
-      },
-      {
-        "id": 9,
-        "fname": "Gareth",
-        "lname": "Mckenna",
-        "gender": "Male",
-        "age": "19",
-        "location": "Aasiaat Greenland",
-        "status": "Already first dose",
-        "profileimg": "https://pbs.twimg.com/profile_images/1305610142319173632/eX2eFuU0.jpg",
-        "vaccine1": [
-          {
-            "vname": "Sputnik Light",
-            "vtype": "Recombinant adenovirus vaccine (rAd26)",
-            "vdate": "Tuesday 13th of April 2021",
-            "vimg": "https://sputnikvaccine.com/local/templates/sputnik/img/logo_inner_new2.jpg"
-          }
-        ],
-        "vaccine2": [
-          {
-            "vname": "",
-            "vtype": "",
-            "vdate": "",
-            "vimg": ""
-          }
-        ]
-      },
-      {
-        "id": 10,
-        "fname": "Niko",
-        "lname": "Shah",
-        "gender": "Female",
-        "age": "37",
-        "location": "Empoli Italy",
-        "status": "Already first dose",
-        "profileimg": "https://pbs.twimg.com/profile_images/1305610142319173632/eX2eFuU0.jpg",
-        "vaccine1": [
-          {
-            "vname": "BBIBP-CorV",
-            "vtype": "Inactivated vaccine",
-            "vdate": "Saturday 1st of February 2020",
-            "vimg": "https://www.clbrief.com/wp-content/uploads/2020/08/Sinopharm-Group.png"
-          }
-        ],
-        "vaccine2": [
-          {
-            "vname": "",
-            "vtype": "",
-            "vdate": "",
-            "vimg": ""
-          }
-        ]
-      }
+      "id": 456,
+      "category": "food",
+      "title": "Community Gardening",
+      "description": "Join us as we tend to the community edible plants.",
+      "location": "Flora City",
+      "date": "March 14, 2022",
+      "time": "10:00",
+      "petsAllowed": true,
+      "organizer": "Fern Pollin"
+    },
+    {
+      "id": 789,
+      "category": "sustainability",
+      "title": "Beach Cleanup",
+      "description": "Help pick up trash along the shore.",
+      "location": "Playa Del Carmen",
+      "date": "July 22, 2022",
+      "time": "11:00",
+      "petsAllowed": false,
+      "organizer": "Carey Wales"
+    },
+    {
+      "id": 1001,
+      "category": "animal welfare",
+      "title": "Dog Adoption Day",
+      "description": "Find your new canine friend at this event.",
+      "location": "Woof Town",
+      "date": "August 28, 2022",
+      "time": "12:00",
+      "petsAllowed": true,
+      "organizer": "Dawg Dahd"
+    },
+    {
+      "id": 1002,
+      "category": "food",
+      "title": "Canned Food Drive",
+      "description": "Bring your canned food to donate to those in need.",
+      "location": "Tin City",
+      "date": "September 14, 2022",
+      "time": "3:00",
+      "petsAllowed": true,
+      "organizer": "Kahn Opiner"
+    },
+    {
+      "id": 1003,
+      "category": "sustainability",
+      "title": "Highway Cleanup",
+      "description": "Help pick up trash along the highway.",
+      "location": "Highway 50",
+      "date": "July 22, 2022",
+      "time": "11:00",
+      "petsAllowed": false,
+      "organizer": "Brody Kill"
+    }
   ]
 }
