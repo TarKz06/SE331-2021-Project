@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import PatientList from '../views/PatientList.vue'
+import About from '../views/About.vue'
+
 import Layout from "../views/detailsPage/Layout.vue"
 import userInfo from "../views/detailsPage/userInfo.vue"
 import vaccineInfo from "../views/detailsPage/vaccineInfo.vue"
@@ -7,13 +9,19 @@ import vaccineInfo from "../views/detailsPage/vaccineInfo.vue"
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'PatientList',
+    component: PatientList,
+    props: (route) => ({ page: parseInt(route.query.page) || 1 })
   },
   {
     path: '/dashboard',
     name: 'Dashboard',
     component: () => import('../views/Dashboard.vue')
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About,
   },
   {
     path: '/details/:id',
