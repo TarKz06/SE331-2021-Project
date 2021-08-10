@@ -1,6 +1,5 @@
 <template>
     <div class="review-container">
-        <h3>Comments</h3>
         <ul>
             <li v-for="(comment,index) in comments" :key="index">
                 "{{comment.comment}}"
