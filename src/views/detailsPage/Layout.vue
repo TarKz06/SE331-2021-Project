@@ -1,6 +1,5 @@
 <template>
   <div v-if="info">
-    <h1>{{ info.title }}</h1>
     <div id="nav">
       <router-link :to="{ name: 'userInfo', params: { id } }">
         User Information

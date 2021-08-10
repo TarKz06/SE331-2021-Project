@@ -1,6 +1,6 @@
 <template>
-  <p>{{ info.time }} on {{ info.date }} @ {{ info.location }}</p>
-  <p>{{ info.description }}</p>
+  <p>{{ info.fname }}</p>
+  <p>{{ info.lname }}</p>
 </template>
 
 <script>
