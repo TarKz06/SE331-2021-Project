@@ -1,7 +1,9 @@
 <template>
   <h1>Patient List</h1>
+
   <div class="plists">
     <PatientCard v-for="plist in plists" :key="plist.id" :plist="plist" />
+
     <div class="pagination">
       <router-link
         id="page-prev"
@@ -44,7 +46,7 @@ export default {
   data() {
     return {
       plists: null,
-      totalPlist: 0 ,
+      totalPlist: 0,
       count: 5
     }
   },
