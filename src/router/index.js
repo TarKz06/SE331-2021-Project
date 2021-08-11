@@ -2,9 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import PatientList from '../views/PatientList.vue'
 import About from '../views/About.vue'
 
-import Layout from "../views/detailsPage/Layout.vue"
-import userInfo from "../views/detailsPage/userInfo.vue"
-import vaccineInfo from "../views/detailsPage/vaccineInfo.vue"
+import Layout from '../views/detailsPage/Layout.vue'
+import userInfo from '../views/detailsPage/userInfo.vue'
+import vaccineInfo from '../views/detailsPage/vaccineInfo.vue'
 
 const routes = [
   {
@@ -21,7 +21,7 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    component: About,
+    component: About
   },
   {
     path: '/details/:id',

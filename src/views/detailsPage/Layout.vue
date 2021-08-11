@@ -24,7 +24,8 @@ export default {
     }
   },
   created() {
-    patientService.getEvent(this.id)
+    patientService
+      .getEvent(this.id)
       .then((response) => {
         this.info = response.data
       })

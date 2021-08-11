@@ -1,21 +1,21 @@
 <template>
-    <div class="review-container">
-        <ul>
-            <li v-for="(comment,index) in comments" :key="index">
-                "{{comment.comment}}"
-                <br/>
-            </li>
-        </ul>
-    </div>
+  <div class="review-container">
+    <ul>
+      <li v-for="(comment, index) in comments" :key="index">
+        "{{ comment.comment }}"
+        <br />
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
-    props: {
-        comments:{
-            type:Array,
-            required: true
-        }
-    },
+  props: {
+    comments: {
+      type: Array,
+      required: true
+    }
+  }
 }
 </script>
