@@ -1,12 +1,17 @@
 <template>
   <div v-if="info">
     <div id="nav">
+      
       <router-link :to="{ name: 'userInfo', params: { id } }">
-        User Information
+        <el-button type="primary" round icon="el-icon-s-custom">User Information</el-button>
       </router-link>
       |
       <router-link :to="{ name: 'vaccineInfo', params: { id } }">
-        Vaccine Menu
+        <el-button type="primary" round icon="el-icon-menu">Vaccine Menu</el-button>
+      </router-link>
+      |
+      <router-link :to="{ name: 'doctorComment', params: { id } }">
+        <el-button type="primary" round icon="el-icon-edit">Doctor Menu</el-button>
       </router-link>
     </div>
     <router-view :info="info" />
