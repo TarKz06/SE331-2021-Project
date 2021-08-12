@@ -5,8 +5,8 @@
         <img :src="plist.profileimg" />
         <div style="padding: 14px">
           <router-link :to="{ name: 'userInfo', params: { id: plist.id } }">
-            <span>{{plist.fname}}</span>
-            <span>{{plist.lname}}</span>
+            <span>{{ plist.fname }}</span>
+            <span>{{ plist.lname }}</span>
           </router-link>
         </div>
       </el-card>
@@ -25,4 +25,3 @@ export default {
   }
 }
 </script>
-

@@ -5,6 +5,7 @@ import store from './store'
 import '@fortawesome/fontawesome-free/js/all'
 import ElementPlus from 'element-plus'
 import installElementPlus from './plugins/element'
+import 'nprogress/nprogress.css'
 
 const app = createApp(App)
 installElementPlus(app)

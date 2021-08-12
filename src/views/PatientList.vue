@@ -30,8 +30,7 @@
 // @ is an alias to /src
 import PatientCard from '@/components/PatientCard.vue'
 import patientService from '@/services/patientService.js'
-import { watchEffect } from '@vue/runtime-core'
-// import axios from 'axios'
+
 export default {
   name: 'PatientList',
   props: {
@@ -46,26 +45,38 @@ export default {
   data() {
     return {
       plists: null,
-      totalPlist: 0,
-      count: 5
+      totalPlist: 0
     }
   },
-  created() {
-    watchEffect(() => {
-      patientService
-        .getEvents(this.count, this.page)
-        .then((response) => {
-          this.plists = response.data
-          this.totalPlist = response.headers['x-total-count'] // <--- Store it
+  // eslint-disable-next-line no-unused-vars
+  beforeRouteEnter(routeTo, routeFrom, next) {
+    patientService
+      .getEvents(5, parseInt(routeTo.query.page) || 1)
+      .then((response) => {
+        next((comp) => {
+        comp.plists = response.data
+        comp.totalPlist = response.headers['x-total-count'] // <--- Store it
         })
-        .catch((error) => {
-          console.log(error)
-        })
-    })
+      })
+      .catch(() => {
+        next({ name: 'NetworkError' })
+      })
+  },
+  beforeRouteUpdate(routeTo, routeFrom, next) {
+    patientService
+      .getEvents(5, parseInt(routeTo.query.page) || 1)
+      .then((response) => {
+        this.plists = response.data
+        this.totalPlist = response.headers['x-total-count'] // <--- Store it
+        next()
+      })
+      .catch(() => {
+        next({ name: 'NetworkError' })
+      })
   },
   computed: {
     hasNextPage() {
-      let totalPages = Math.ceil(this.totalPlist / this.count)
+      let totalPages = Math.ceil(this.totalPlist / 5)
       return this.page < totalPages
     }
   }

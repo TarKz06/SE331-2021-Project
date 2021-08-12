@@ -8,16 +8,12 @@
     text-color="#fff"
     active-text-color="#ffd04b"
   >
-  <el-menu-item index="0">
-    <router-link :to="{ name: 'PatientList'}">
-      HOME
-    </router-link>
-  </el-menu-item>
-  <el-menu-item index="1">
-    <router-link :to="{ name: 'About'}">
-      KEEMO-NUMBA-ONE
-    </router-link>
-  </el-menu-item>
+    <el-menu-item index="0">
+      <router-link :to="{ name: 'PatientList' }"> HOME </router-link>
+    </el-menu-item>
+    <el-menu-item index="1">
+      <router-link :to="{ name: 'About' }"> KEEMO-NUMBA-ONE </router-link>
+    </el-menu-item>
   </el-menu>
 </template>
 <script>

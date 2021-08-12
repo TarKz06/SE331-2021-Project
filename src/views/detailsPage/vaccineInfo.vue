@@ -2,13 +2,13 @@
   <h1>Vaccine Information</h1>
   <div>
     <el-row>
-      <el-tag type="danger">Total dose: {{plist.status}}</el-tag>
+      <el-tag type="danger">Total dose: {{ plist.status }}</el-tag>
       <el-col :span="6"></el-col>
       <el-col :span="12">
         <el-tag type="success">First dose</el-tag>
-        <el-card :body-style="{ padding: '10px'}">
+        <el-card :body-style="{ padding: '10px' }">
           <div class="bottom">
-            <img :src="plist.vaccineDetails[0].vimg" class="image">
+            <img :src="plist.vaccineDetails[0].vimg" class="image" />
           </div>
           <div class="div">
             <p><b>Name: </b>{{ plist.vaccineDetails[0].vname }}</p>
@@ -20,15 +20,15 @@
       <el-col :span="6"></el-col>
     </el-row>
   </div>
-  <br>
+  <br />
   <div>
-    <el-row >
+    <el-row>
       <el-col :span="6"></el-col>
       <el-col v-if="plist.vaccineDetails[1].vname" :span="12">
         <el-tag type="success">Second dose</el-tag>
-        <el-card :body-style="{ padding: '10px'}">
+        <el-card :body-style="{ padding: '10px' }">
           <div class="bottom">
-            <img :src="plist.vaccineDetails[1].vimg" class="image">
+            <img :src="plist.vaccineDetails[1].vimg" class="image" />
           </div>
           <div class="div">
             <p><b>Name: </b>{{ plist.vaccineDetails[1].vname }}</p>
@@ -42,41 +42,32 @@
   </div>
 </template>
 
-
 <script>
-  export default {
+export default {
   props: ['plist'],
-  data(){
-    return{
-
-    }
+  data() {
+    return {}
   }
 }
 </script>
 
-
 <style>
-  
-  .bottom {
-    margin-top: 13px;
-    line-height: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.bottom {
+  margin-top: 13px;
+  line-height: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .image {
-    width: 100%;
-    display: block;
-  }
+.image {
+  width: 100%;
+  display: block;
+}
 
-  .div{
-     text-align: left;
-     text-size-adjust: small;
-     margin: 5%;
-  }
-
+.div {
+  text-align: left;
+  text-size-adjust: small;
+  margin: 5%;
+}
 </style>
-
-
-
