@@ -2,7 +2,6 @@
   <form class="review-form" @submit.prevent="onSubmit">
     <label for="comment">Doctor's comment: </label>
     <textarea id="comment" v-model="comment"></textarea>
-
     <input class="button" type="submit" value="Submit" />
   </form>
 </template>
