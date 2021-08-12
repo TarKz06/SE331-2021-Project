@@ -1,8 +1,10 @@
 <template>
   <form class="review-form" @submit.prevent="onSubmit">
-    <label for="comment">Doctor's comment: </label>
+    <label for="name">Name: </label>
+    <input id="name" v-model="name">
+    <br>
+    <label for="comment">Comment: </label>
     <textarea id="comment" v-model="comment"></textarea>
-
     <input class="button" type="submit" value="Submit" />
   </form>
 </template>
@@ -11,20 +13,23 @@
 export default {
   data() {
     return {
-      comment: ''
+      comment: '',
+      name: ''
     }
   },
   methods: {
     onSubmit() {
-      if (this.comment === '') {
+      if (this.comment === ''||this.name === '') {
         alert('Comment is incomplete. Please fill out every field.')
         return
       }
       let productReview = {
-        comment: this.comment
+        comment: this.comment,
+        name: this.name
       }
       this.$emit('submitted', productReview)
       this.comment = ''
+      this.name = ''
     }
   }
 }
