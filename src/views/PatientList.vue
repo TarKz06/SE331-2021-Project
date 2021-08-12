@@ -1,9 +1,9 @@
 <template>
   <h1>Patient List</h1>
-
-  <div class="plists">
+  <q-page-container class="flex flex-center q-pa-md row q-gutter-lg">
     <PatientCard v-for="plist in plists" :key="plist.id" :plist="plist" />
-
+  </q-page-container>
+  <div class="plists">
     <div class="pagination">
       <router-link
         id="page-prev"
@@ -11,8 +11,11 @@
         rel="prev"
         v-if="page != 1"
       >
-        Prev Page</router-link
-      >
+        <q-btn
+          color="red"
+          label="Prev Page" />
+        <br
+      /></router-link>
 
       <router-link
         id="page-next"
@@ -20,8 +23,11 @@
         rel="next"
         v-if="hasNextPage"
       >
-        Next Page</router-link
-      >
+        <q-btn
+          color="red"
+          label="Next Page" />
+        <br
+      /></router-link>
     </div>
   </div>
 </template>
