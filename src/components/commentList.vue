@@ -2,10 +2,10 @@
   <div class="review-container">
     <ul>
       <li v-for="(comment, index) in comments" :key="index">
-        Name: {{comment.name}}
-        <br>
+        Name: {{ comment.name }}
+        <br />
         Discription: "{{ comment.comment }}"
-        <br>
+        <br />
       </li>
     </ul>
   </div>

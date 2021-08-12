@@ -1,10 +1,10 @@
 <template>
-    <div id="flashMessage" v-if="GStore.flashMessage">
-        {{GStore.flashMessage}}
-    </div>
-    <h3>Comments</h3>
-    <CommentFrom @submitted="addComment" v-on:submitted="flash"/>
-    <CommentList v-if="comment.length" :comments="comment" />
+  <div id="flashMessage" v-if="GStore.flashMessage">
+    {{ GStore.flashMessage }}
+  </div>
+  <h3>Comments</h3>
+  <CommentFrom @submitted="addComment" v-on:submitted="flash" />
+  <CommentList v-if="comment.length" :comments="comment" />
 </template>
 
 <script>
@@ -13,7 +13,7 @@ import CommentList from '@/components/commentList.vue'
 
 export default {
   props: ['plist'],
-  inject:['GStore'],
+  inject: ['GStore'],
   components: {
     CommentFrom,
     CommentList
@@ -27,9 +27,13 @@ export default {
     addComment(doc) {
       this.comment.push(doc)
     },
-    flash(){
-      this.GStore.flashMessage = 'You are successfully commented for ' + this.plist.fname+' '+this.plist.lname
-      setTimeout(() =>{
+    flash() {
+      this.GStore.flashMessage =
+        'You are successfully commented for ' +
+        this.plist.fname +
+        ' ' +
+        this.plist.lname
+      setTimeout(() => {
         //After 3 seconds remove it
         this.GStore.flashMessage = ''
       }, 3000)
@@ -39,7 +43,7 @@ export default {
 </script>
 
 <style>
-@keyframes yellowfade{
+@keyframes yellowfade {
   from {
     background: yellow;
   }

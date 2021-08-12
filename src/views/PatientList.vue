@@ -54,8 +54,8 @@ export default {
       .getEvents(5, parseInt(routeTo.query.page) || 1)
       .then((response) => {
         next((comp) => {
-        comp.plists = response.data
-        comp.totalPlist = response.headers['x-total-count'] // <--- Store it
+          comp.plists = response.data
+          comp.totalPlist = response.headers['x-total-count'] // <--- Store it
         })
       })
       .catch(() => {
