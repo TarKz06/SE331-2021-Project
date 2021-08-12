@@ -8,14 +8,16 @@
     text-color="#fff"
     active-text-color="#ffd04b"
   >
-    <el-menu-item index="0">KEEMO-NUMBA-ONE</el-menu-item>
-    <el-menu-item index="1">HOME</el-menu-item>
-    <el-submenu index="2">
-      <template #title>Patient List</template>
-      <el-menu-item index="2-1">Page 1</el-menu-item>
-      <el-menu-item index="2-2">Page 2</el-menu-item>
-      <el-menu-item index="2-3">Page 3</el-menu-item>
-    </el-submenu>
+  <el-menu-item index="0">
+    <router-link :to="{ name: 'PatientList'}">
+      HOME
+    </router-link>
+  </el-menu-item>
+  <el-menu-item index="1">
+    <router-link :to="{ name: 'About'}">
+      KEEMO-NUMBA-ONE
+    </router-link>
+  </el-menu-item>
   </el-menu>
 </template>
 <script>
