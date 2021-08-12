@@ -9,6 +9,10 @@
       <router-link :to="{ name: 'vaccineInfo', params: { id } }">
         <el-button type="primary" round icon="el-icon-menu">Vaccine Menu</el-button>
       </router-link>
+      |
+      <router-link :to="{ name: 'doctorComment', params: { id } }">
+        <el-button type="primary" round icon="el-icon-edit">Doctor Menu</el-button>
+      </router-link>
     </div>
     <router-view :info="info" />
   </div>
