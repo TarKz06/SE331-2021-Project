@@ -17,10 +17,10 @@
             :span="6"
           >
             <el-card :body-style="{ padding: '0px' }" shadow="hover">
-              <div class="avatar"><el-avatar :size="280"><img :src="info.profileimg" /></el-avatar></div>
+              <div class="avatar"><el-avatar :size="280"><img :src="plist.profileimg" /></el-avatar></div>
               <el-divider><h2>Profile Picture</h2></el-divider>
               <div style="padding-top: 17px; padding-bottom: 17px;">
-                <h3>Patient ID: {{ info.id }}</h3>
+                <h3>Patient ID: {{ plist.id }}</h3>
               </div>
             </el-card>
           </el-col>
@@ -34,15 +34,15 @@
               </div>
 
               <div style="padding-top: 16px" class="profile">
-                <p> <b> Name: </b> {{ info.fname }} </p> 
-                <p> <b> Surname: </b> {{ info.lname }} </p> 
-                <p> <b> Age: </b> {{ info.age }} </p> 
-                <p> <b> Gender: </b> {{ info.gender }} </p> 
-                <p> <b> Province: </b> {{ info.location }} </p> 
+                <p> <b> Name: </b> {{ plist.fname }} </p> 
+                <p> <b> Surname: </b> {{ plist.lname }} </p> 
+                <p> <b> Age: </b> {{ plist.age }} </p> 
+                <p> <b> Gender: </b> {{ plist.gender }} </p> 
+                <p> <b> Province: </b> {{ plist.location }} </p> 
               </div>
               <div class="status">
                   <h2>Status: </h2>
-                  <h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ info.status }} </h3>
+                  <h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ plist.status }} </h3>
               </div>
             </el-card>
           </el-col>
@@ -67,7 +67,7 @@ import CommentFrom from '@/components/commentForm.vue'
 import CommentList from '@/components/commentList.vue'
 
 export default {
-  props: ['info'],
+  props: ['plist'],
   components: {
     CommentFrom,
     CommentList

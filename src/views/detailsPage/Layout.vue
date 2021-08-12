@@ -1,5 +1,5 @@
 <template>
-  <div v-if="info">
+  <div v-if="plist">
     <div id="nav">
       
       <router-link :to="{ name: 'userInfo', params: { id } }">
@@ -14,7 +14,7 @@
         <el-button type="primary" round icon="el-icon-edit">Doctor Menu</el-button>
       </router-link>
     </div>
-    <router-view :info="info" />
+    <router-view :plist="plist" />
   </div>
 </template>
 
@@ -25,20 +25,20 @@ export default {
   props: ['id'],
   data() {
     return {
-      info: null
+      plist: null
     }
   },
   created() {
     patientService
       .getEvent(this.id)
       .then((response) => {
-        this.info = response.data
+        this.plist = response.data
       })
       .catch((error) => {
         if (error.response && error.response.status == 404) {
           this.$router.push({
             name: '404Resource',
-            params: { resource: 'info' }
+            params: { resource: 'plist' }
           })
         } else {
           this.$router.push({ name: 'NetworkError' })

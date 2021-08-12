@@ -33,6 +33,7 @@ const routes = [
       {
         path: '',
         name: 'userInfo',
+        props: true,
         component: userInfo
       },
       {
