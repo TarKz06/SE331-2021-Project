@@ -5,6 +5,7 @@ import About from '../views/About.vue'
 import Layout from '../views/detailsPage/Layout.vue'
 import userInfo from '../views/detailsPage/userInfo.vue'
 import vaccineInfo from '../views/detailsPage/vaccineInfo.vue'
+import doctorComment from '../views/detailsPage/doctorComment.vue'
 
 const routes = [
   {
@@ -39,6 +40,12 @@ const routes = [
         name: 'vaccineInfo',
         props: true,
         component: vaccineInfo
+      },
+      {
+        path: 'doctorComment',
+        name: 'doctorComment',
+        props: true,
+        component: doctorComment
       }
     ]
   }
