@@ -3,7 +3,7 @@
         {{GStore.flashMessage}}
     </div>
     <h3>Comments</h3>
-    <CommentFrom @submitted="addComment" />
+    <CommentFrom @submitted="addComment" v-on:submitted="flash"/>
     <CommentList v-if="comment.length" :comments="comment" />
 </template>
 
@@ -26,6 +26,13 @@ export default {
   methods: {
     addComment(doc) {
       this.comment.push(doc)
+    },
+    flash(){
+      this.GStore.flashMessage = 'You are successfully commented for ' + this.plist.fname+' '+this.plist.lname
+      setTimeout(() =>{
+        //After 3 seconds remove it
+        this.GStore.flashMessage = ''
+      }, 3000)
     }
   }
 }

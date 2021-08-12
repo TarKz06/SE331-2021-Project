@@ -9,6 +9,5 @@ import 'nprogress/nprogress.css'
 
 const app = createApp(App)
 installElementPlus(app)
-app.use(store).use(router).use(ElementPlus).mount('#app')
 const GStore = reactive({flashMessage: ''})
-createApp(App).use(store).use(router).provide('GStore',GStore).mount('#app')
+app.use(store).use(router).use(ElementPlus).provide('GStore',GStore).mount('#app')
