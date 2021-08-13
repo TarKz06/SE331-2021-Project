@@ -1,54 +1,66 @@
 <template>
   <div class="common-layout">
     <div class="profileTitle">
-      <h1>Patient Information</h1>
+      <h3><b>Patient Information</b></h3>
     </div>
-    <el-container style="text-align: center">
-      <el-main>
-        <el-row :gutter="20">
-          <el-col :span="4"></el-col>
 
-          <el-col :span="6">
-            <el-card :body-style="{ padding: '0px' }" shadow="hover">
-              <div class="avatar">
-                <el-avatar :size="280"
-                  ><img :src="plist.profileimg"
-                /></el-avatar>
-              </div>
-              <el-divider><h2>Profile Picture</h2></el-divider>
-              <div style="padding-top: 17px; padding-bottom: 17px">
-                <h3>Patient ID: {{ plist.id }}</h3>
-              </div>
-            </el-card>
-          </el-col>
+    <center>
+      <div class="row q-gutter-sm">
 
-          <el-col :span="10">
-            <el-card :body-style="{ padding: '0px' }" shadow="hover">
-              <div class="profileTitle">
-                <h1>PROFILE</h1>
-              </div>
 
-              <div style="padding-top: 16px" class="profile">
-                <p><b> Name: </b> {{ plist.fname }}</p>
-                <p><b> Surname: </b> {{ plist.lname }}</p>
-                <p><b> Age: </b> {{ plist.age }}</p>
-                <p><b> Gender: </b> {{ plist.gender }}</p>
-                <p><b> Province: </b> {{ plist.location }}</p>
-              </div>
-              <div class="status">
-                <h2>Status:</h2>
-                <h3>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  {{ plist.status }}
-                </h3>
-              </div>
-            </el-card>
-          </el-col>
+<div class="col-xs-12 col-md-3 col-lg-2">
+</div>
 
-          <el-col :span="4"></el-col>
-        </el-row>
-      </el-main>
-    </el-container>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <q-card class="my-card shadow-3 bg-secondary">
+            <div
+              class="column items-center"
+              style="height: 300px; padding-top: 15px"
+            >
+              <q-item>
+                <q-item-section avatar>
+                  <q-avatar size="250px">
+                    <img :src="plist.profileimg" />
+                  </q-avatar>
+                </q-item-section>
+              </q-item>
+            </div>
+
+            <q-separator color="dark" inset />
+
+            <q-card-section>
+              <p class="patientId"><b> Patient ID: {{ plist.id }} </b></p>  
+            </q-card-section>
+          </q-card>
+        </div>
+
+      <div class="col-xs-12 col-md-12 col-lg-5">
+          <q-card class="card2 my-card shadow-3 bg-secondary" >
+            <div
+              style="height: 300px; padding-top: 15px"
+            >
+              <h3><b>PROFILE</b></h3>
+              <p class="profile"> 
+                <b>Name:</b> {{ plist.fname }} <br>
+                <b>Surname:</b> {{ plist.lname }} <br>
+                <b>Age:</b> {{ plist.age }} <br>
+                <b>Gender:</b> {{ plist.gender }} <br>
+                <b>Hometown:</b> {{ plist.location }} <br>
+                <b>Number of dose(s) injected:</b> {{ plist.status }} 
+              </p>
+              
+            </div>
+
+
+          </q-card>
+        </div>
+
+<div class="col-xs-12 col-md-0 col-lg-2">
+</div>
+
+      </div>
+
+    </center>
   </div>
 </template>
 
@@ -59,20 +71,22 @@ export default {
 </script>
 
 <style>
-.el-card {
-  background-color: darkturquoise;
-}
 .avatar {
-  padding-top: 30px;
-  padding-bottom: 15px;
+  align-items: center;
+  text-align: center;
+  display: flex;
 }
-.image {
-  width: auto;
-  display: block;
-  align-items: left;
+.q-card {
+  padding: 0px;
+}
+.q-item__section--side {
+  padding-right: 0px;
 }
 .row {
   align-content: center;
+}
+.patientId {
+  font-size: 24px;
 }
 .profileTitle {
   font-size: 24px;
@@ -85,7 +99,26 @@ export default {
 .status {
   text-align: left;
   padding-left: 60px;
-  font-size: 18px;
+  font-size: 14px;
   padding-bottom: 15px;
+}
+.my-card {
+  width: fit-content;
+  height: 400px;
+}
+.my-card:hover {
+  cursor: pointer;
+  opacity: 0.5px;
+  transform: scale(1.05);
+  box-shadow: 100px;
+}
+.card2 {
+  width: 600px;
+}
+
+@media only screen and (max-width: 500px) {
+  .card2 {
+    width: 400px;
+  }
 }
 </style>

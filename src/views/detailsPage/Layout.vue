@@ -2,21 +2,15 @@
   <div v-if="plist">
     <div id="nav">
       <router-link :to="{ name: 'userInfo', params: { id } }">
-        <el-button type="primary" round icon="el-icon-s-custom"
-          >User Information</el-button
-        >
+        <q-btn style="background: goldenrod; color: white" glossy label="Patient Information" />
       </router-link>
       |
       <router-link :to="{ name: 'vaccineInfo', params: { id } }">
-        <el-button type="primary" round icon="el-icon-menu"
-          >Vaccine Menu</el-button
-        >
+        <q-btn style="background: goldenrod; color: white" glossy label="Vaccine Menu" />
       </router-link>
       |
       <router-link :to="{ name: 'doctorComment', params: { id } }">
-        <el-button type="primary" round icon="el-icon-edit"
-          >Doctor Menu</el-button
-        >
+        <q-btn style="background: goldenrod; color: white" glossy label="Doctor Menu" />
       </router-link>
     </div>
     <router-view :plist="plist" />
