@@ -12,7 +12,7 @@
 </div>
 
         <div class="col-xs-12 col-md-6 col-lg-3">
-          <q-card class="my-card shadow-3 bg-secondary">
+          <q-card class="card1 my-card shadow-5 bg-secondary">
             <div
               class="column items-center"
               style="height: 300px; padding-top: 15px"
@@ -35,19 +35,24 @@
         </div>
 
       <div class="col-xs-12 col-md-12 col-lg-5">
-          <q-card class="card2 my-card shadow-3 bg-secondary" >
+          <q-card class="card2 my-card shadow-5 bg-secondary" >
             <div
               style="height: 300px; padding-top: 15px"
             >
-              <h3><b>PROFILE</b></h3>
+              <p class="bigProfile" style="color: cornsilk;"><b>PROFILE</b></p>
+              <q-separator color="dark" inset />
               <p class="profile"> 
                 <b>Name:</b> {{ plist.fname }} <br>
                 <b>Surname:</b> {{ plist.lname }} <br>
                 <b>Age:</b> {{ plist.age }} <br>
                 <b>Gender:</b> {{ plist.gender }} <br>
                 <b>Hometown:</b> {{ plist.location }} <br>
-                <b>Number of dose(s) injected:</b> {{ plist.status }} 
               </p>
+                <p class="status">
+                  <b>Dose(s) injected:</b> <br>
+                  <center> {{ plist.status }} </center>
+                </p>
+              
               
             </div>
 
@@ -87,33 +92,46 @@ export default {
 }
 .patientId {
   font-size: 24px;
+  color: cornsilk;
 }
 .profileTitle {
   font-size: 24px;
 }
+.bigProfile {
+  font-size: 40px;
+}
 .profile {
   text-align: left;
   font-size: 20px;
+  padding-top: 30px;
   padding-left: 60px;
+  color: cornsilk;
 }
 .status {
   text-align: left;
+  font-size: 30px;
   padding-left: 60px;
-  font-size: 14px;
-  padding-bottom: 15px;
+  color: cornsilk;
 }
-.my-card {
+.card1 {
   width: fit-content;
   height: 400px;
 }
-.my-card:hover {
+.card1:hover {
   cursor: pointer;
   opacity: 0.5px;
-  transform: scale(1.05);
-  box-shadow: 100px;
+  transform: scale(1.30);
+  box-shadow: 300px;
 }
 .card2 {
   width: 600px;
+  height: 400px;
+}
+.card2:hover {
+  cursor: pointer;
+  opacity: 0.5px;
+  transform: scale(1.30);
+  box-shadow: 300px;
 }
 
 @media only screen and (max-width: 500px) {
