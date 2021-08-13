@@ -25,7 +25,11 @@
         <br
       /></router-link>
     </div>
+    <div class="test2">
+        
+    </div>
   </div>
+  
 </template>
 
 <script>
@@ -108,5 +112,9 @@ export default {
 }
 .test {
   font-family: 'Courier New', monospace;
+}
+.test2 {
+  font-family: 'Courier New', monospace;
+  padding: 70px;
 }
 </style>

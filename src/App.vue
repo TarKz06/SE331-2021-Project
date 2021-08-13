@@ -1,15 +1,17 @@
 <script>
 import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
+
 export default {
-  components: { Navbar }
+  components: { Navbar, Footer }
 }
 </script>
 <template>
   <Navbar />
   <q-layout view="lHh Lpr lFf">
     <router-view />
+    <Footer/>
   </q-layout>
- 
 </template>
 
 <style>
@@ -18,7 +20,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #6E7582;
+  color: #6e7582;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,7 +31,7 @@ export default {
   padding: 30px;
 }
 
-#nav a { 
+#nav a {
   font-weight: bold;
   color: #2c3e50;
 }

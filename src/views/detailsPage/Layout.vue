@@ -2,15 +2,27 @@
   <div v-if="plist">
     <div id="nav">
       <router-link :to="{ name: 'userInfo', params: { id } }">
-        <q-btn style="background: goldenrod; color: white" glossy label="Patient Information" />
+        <q-btn
+          style="background: goldenrod; color: white"
+          glossy
+          label="Patient Information"
+        />
       </router-link>
       |
       <router-link :to="{ name: 'vaccineInfo', params: { id } }">
-        <q-btn style="background: goldenrod; color: white" glossy label="Vaccine Menu" />
+        <q-btn
+          style="background: goldenrod; color: white"
+          glossy
+          label="Vaccine Menu"
+        />
       </router-link>
       |
       <router-link :to="{ name: 'doctorComment', params: { id } }">
-        <q-btn style="background: goldenrod; color: white" glossy label="Doctor Menu" />
+        <q-btn
+          style="background: goldenrod; color: white"
+          glossy
+          label="Doctor Menu"
+        />
       </router-link>
     </div>
     <router-view :plist="plist" />
