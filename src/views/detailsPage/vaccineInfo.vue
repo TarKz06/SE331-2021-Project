@@ -1,45 +1,41 @@
 <template>
-  <h1>Vaccine Information</h1>
-  <div>
-    <el-row>
-      <el-tag type="danger">Total dose: {{ plist.status }}</el-tag>
-      <el-col :span="6"></el-col>
-      <el-col :span="12">
-        <el-tag type="success">First dose</el-tag>
-        <el-card :body-style="{ padding: '10px' }">
-          <div class="bottom">
-            <img :src="plist.vaccineDetails[0].vimg" class="image" />
+  <q-layout view="lHh Lpr lFf">
+    <q-page-container class="flex flex-center q-pa-md row q-gutter-lg">
+      <q-card class="my-card">
+        <q-img :src="plist.vaccineDetails[0].vimg"></q-img>
+        <q-card-section>
+          <div class="text-overline text-orange-9">
+            Already Inject Dose : {{ plist.vaccineDetails[0].vdose }}
           </div>
-          <div class="div">
-            <p><b>Name: </b>{{ plist.vaccineDetails[0].vname }}</p>
-            <p><b>Type: </b>{{ plist.vaccineDetails[0].vtype }}</p>
-            <p><b>Vaccinated Date: </b>{{ plist.vaccineDetails[0].vdate }}</p>
+          <div class="text-h5 q-mt-sm q-mb-xs">
+            {{ plist.vaccineDetails[0].vname }}
           </div>
-        </el-card>
-      </el-col>
-      <el-col :span="6"></el-col>
-    </el-row>
-  </div>
-  <br />
-  <div>
-    <el-row>
-      <el-col :span="6"></el-col>
-      <el-col v-if="plist.vaccineDetails[1].vname" :span="12">
-        <el-tag type="success">Second dose</el-tag>
-        <el-card :body-style="{ padding: '10px' }">
-          <div class="bottom">
-            <img :src="plist.vaccineDetails[1].vimg" class="image" />
+          <div class="text-caption text-grey">
+            Technology : {{ plist.vaccineDetails[0].vtype }}
+            <br />
+            <span>{{ plist.vaccineDetails[0].vdate }}</span>
           </div>
-          <div class="div">
-            <p><b>Name: </b>{{ plist.vaccineDetails[1].vname }}</p>
-            <p><b>Type: </b>{{ plist.vaccineDetails[1].vtype }}</p>
-            <p><b>Vaccinated Date: </b>{{ plist.vaccineDetails[1].vdate }}</p>
+        </q-card-section>
+      </q-card>
+
+      <q-card v-if="plist.vaccineDetails[1].vname" class="my-card">
+        <q-img :src="plist.vaccineDetails[1].vimg"></q-img>
+        <q-card-section>
+          <div class="text-overline text-orange-9">
+            Already Inject Dose : {{ plist.vaccineDetails[1].vdose }}
           </div>
-        </el-card>
-      </el-col>
-      <el-col :span="6"></el-col>
-    </el-row>
-  </div>
+          <div class="text-h5 q-mt-sm q-mb-xs">
+            {{ plist.vaccineDetails[1].vname }}
+          </div>
+          <div class="text-caption text-grey">
+            Technology : {{ plist.vaccineDetails[1].vtype }}
+            <br />
+            <span>{{ plist.vaccineDetails[1].vdate }}</span>
+          </div>
+        </q-card-section>
+      </q-card>
+    </q-page-container>
+  </q-layout>
 </template>
 
 <script>
@@ -69,5 +65,10 @@ export default {
   text-align: left;
   text-size-adjust: small;
   margin: 5%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 </style>
