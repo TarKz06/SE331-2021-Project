@@ -1,12 +1,27 @@
 <template>
-  <form class="review-form" @submit.prevent="onSubmit">
-    <label for="name">Name: </label>
-    <input id="name" v-model="name" />
-    <br />
-    <label for="comment">Comment: </label>
-    <textarea id="comment" v-model="comment"></textarea>
-    <input class="button" type="submit" value="Submit" />
-  </form>
+<div class="comment">
+  <div class="q-pa-md">
+    <center>
+    <div class="q-gutter-y-md column" style="max-width: 500px" >
+      <form class="review-form" @submit.prevent="onSubmit">
+        <q-input
+        label="Add a comment..."
+            v-model="comment"
+            filled
+            type="textarea"
+            id="comment"
+        />
+        <br>
+        <q-input filled v-model="name" label="Name :" :dense="dense" id="name"/>
+        
+          <br>
+        <q-btn class="input" type="submit" label="Submit" color="secondary" />
+      </form>
+    </div>
+    </center>
+  </div>
+  </div>
+  <q-separator />
 </template>
 
 <script>
@@ -35,3 +50,6 @@ export default {
   }
 }
 </script>
+<style>
+.comment{}
+</style>
