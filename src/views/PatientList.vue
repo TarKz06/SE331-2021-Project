@@ -1,5 +1,5 @@
 <template>
-  <h1>Patient List</h1>
+  <h1 class="text">Patient List</h1>
   <q-page-container class="flex flex-center q-pa-md row q-gutter-lg">
     <PatientCard v-for="plist in plists" :key="plist.id" :plist="plist" />
   </q-page-container>
@@ -11,9 +11,7 @@
         rel="prev"
         v-if="page != 1"
       >
-        <q-btn
-          color="red"
-          label="Prev Page" />
+        <q-btn style="padding:15px"  color="secondary" label="Prev Page" />
         <br
       /></router-link>
 
@@ -23,9 +21,7 @@
         rel="next"
         v-if="hasNextPage"
       >
-        <q-btn
-          color="red"
-          label="Next Page" />
+        <q-btn style="padding:15px" color="secondary" label="Next Page" />
         <br
       /></router-link>
     </div>
@@ -96,7 +92,7 @@ export default {
 }
 .pagination {
   display: flex;
-  width: 290px;
+  width: 500px;
 }
 .pagination a {
   flex: 1;
@@ -108,5 +104,9 @@ export default {
 }
 #page-next {
   text-align: right;
+  
+}
+.test {
+  font-family: 'Courier New', monospace;
 }
 </style>

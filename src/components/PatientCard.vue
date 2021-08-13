@@ -46,17 +46,19 @@ export default {
 </script>
 <style scoped>
 .my-card {
-  width: 400px;
+  width: 350px;
 }
 a:link {
-  color: rgb(148, 141, 141);
+  color: rgb(233, 230, 230);
   padding: 15px 25px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
 }
-a:hover,
+a:visited{
+    color: rgb(70, 70, 70);
+}
 a:active {
-  background-color: wheat;
+  background-color: rgb(246, 241, 231);
 }
 </style>

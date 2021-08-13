@@ -9,6 +9,7 @@ export default {
   <q-layout view="lHh Lpr lFf">
     <router-view />
   </q-layout>
+ 
 </template>
 
 <style>
@@ -17,14 +18,18 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #6E7582;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-color: #e2e7f0;
 }
-
 #nav {
   padding: 30px;
 }
 
-#nav a {
+#nav a { 
   font-weight: bold;
   color: #2c3e50;
 }
