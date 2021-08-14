@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+    web:
+        image: "khematat01/se331-project"
+        ports: 
+            - 80:80
+            - 8001:80
